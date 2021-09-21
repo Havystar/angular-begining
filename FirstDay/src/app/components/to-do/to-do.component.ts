@@ -26,7 +26,7 @@ export class ToDoComponent {
     let todo: IToDo = {name: event.target.value, done: false};
     this.todos.push(todo);
   }
-  lol(toDo:IToDo){
+  setDone(toDo:IToDo){
     toDo.done = !toDo.done;
   }
 }

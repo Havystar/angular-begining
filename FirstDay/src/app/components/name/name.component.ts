@@ -8,23 +8,23 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class NameComponent {
-  imie = "";
-  powitanie = "Dobry wieczór";
+  name = "";
+  greating = "Dobry wieczór";
   constructor() {
     let date = new Date();
     if (date.getHours() > 5 && date.getHours() < 19) {
-      this.powitanie = "Dzień dobry";
+      this.greating = "Dzień dobry";
     }
     let fromLS = localStorage.getItem('name');
     if (fromLS != "" && fromLS != undefined) {
-      this.imie = fromLS;
+      this.name = fromLS;
     }
   }
 
   setName(event: any): void {
     if (event.target.value != "") {
-      this.imie = event.target.value;
-      localStorage.setItem('name', this.imie);
+      this.name = event.target.value;
+      localStorage.setItem('name', this.name);
     }
   }
 
