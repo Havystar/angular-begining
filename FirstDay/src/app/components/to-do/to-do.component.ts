@@ -23,10 +23,10 @@ export class ToDoComponent {
   ];
 
   addToDo(event: any): void {
-    let todo: IToDo = {name: event.target.value, done: false};
+    let todo: IToDo = { name: event.target.value, done: false };
     this.todos.push(todo);
   }
-  setDone(toDo:IToDo){
+  setDone(toDo: IToDo) {
     toDo.done = !toDo.done;
   }
 }

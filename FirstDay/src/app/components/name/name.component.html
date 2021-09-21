@@ -1,4 +1,3 @@
-<p *ngIf="name=='' then thenBlock" ></p>
+<p *ngIf="name=='' then thenBlock"></p>
 <ng-template #thenBlock>what is your name?<input type="text" (keydown.enter)="setName($event)"></ng-template>
 <p *ngIf="name!=''">{{greating}} {{name}}</p>
-

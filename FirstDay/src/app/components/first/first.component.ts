@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 })
 
 export class FirstComponent {
-    public now: Date = new Date();
+  public now: Date = new Date();
 
-    constructor() {
-        setInterval(() => {
-          this.now = new Date();
-        }, 1);
-    }
+  constructor() {
+    setInterval(() => {
+      this.now = new Date();
+    }, 1);
+  }
 }
