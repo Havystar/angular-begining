@@ -1,0 +1,38 @@
+.title {
+    width: 100%;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 69px;
+    color: #ffffff;
+}
+.name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.to-do {
+    left: calc(100% - 20%);
+    top: calc(100% - 20%);
+    background: rgba(196, 196, 196, 0.5);
+    position: absolute;
+    width: 17%;
+    height: 15%;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #ffffff;
+}

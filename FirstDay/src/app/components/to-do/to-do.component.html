@@ -1,0 +1,5 @@
+<p>to-do:</p>
+<input type="text" (keydown.enter)="addToDo($event)">
+<ul>
+    <li *ngFor="let todo of todos" [ngClass]="{'crossed': todo.done}" (click)="lol(todo)">{{todo.name}}</li>
+</ul>
