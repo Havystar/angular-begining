@@ -26,8 +26,11 @@ import { PatroniteDashbordComponent } from './patronite/components/patronite-das
     PatroniteDashbordComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

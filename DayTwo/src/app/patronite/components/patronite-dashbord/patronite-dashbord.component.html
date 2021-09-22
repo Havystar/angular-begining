@@ -1,0 +1,23 @@
+<p>patronite-dashbord works!</p>
+<form [formGroup]="patroniteForm" (ngSubmit)="onSubmit()" class="form">
+    <label for="name">imie: </label>
+    <input id="name" type="text" formControlName="name" />
+    <label for="messege">wiadomość: </label>
+    <input id="messege" type="text" formControlName="messege" />
+    <label for="method"></label>
+    <select id="method" (change)="onSelect($event)" formControlName="method">
+        <option *ngFor="let method of methodList" [value]="method.value">
+            {{method.label}}
+        </option>
+    </select>
+    <span [ngSwitch]="selected">
+        <p *ngSwitchCase="1">Dziękujemy za wsparcie! Pamiętaj że tpay zabiera z twojego datku aż 3%</p>
+
+        <p *ngSwitchCase="2">Dziękujemy za wsparcie! Pamiętaj że tpay zabiera z twojego datku aż 2.5%</p>
+
+        <p *ngSwitchCase="3">Dziękujemy za wsparcie! Przelew na konto to najlepsza forma wsparcia</p>
+
+        <p *ngSwitchDefault></p>
+    </span>
+    <button type="submit">Send Money</button>
+</form>

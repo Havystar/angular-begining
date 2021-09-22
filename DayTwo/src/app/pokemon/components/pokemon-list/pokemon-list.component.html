@@ -1,7 +1,6 @@
 <ul>
     <li *ngFor="let pokemon of pokemons">
-        <app-pokemon-item [pokemonItem]="pokemon">
+        <app-pokemon-item [pokemonItem]="pokemon" (removePokemon)="deletePokemon($event)">
         </app-pokemon-item>
     </li>
 </ul>
-<input type="text" (keydown.enter)="addPoke($event)">
