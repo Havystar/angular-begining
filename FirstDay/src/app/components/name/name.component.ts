@@ -11,19 +11,21 @@ export class NameComponent {
   name = "";
   greating = "Dobry wieczór";
   constructor() {
-    let date = new Date();
-    if (date.getHours() > 5 && date.getHours() < 19) {
-      this.greating = "Dzień dobry";
-    }
-    let fromLS = localStorage.getItem('name');
-    if (fromLS != "" && fromLS != undefined) {
-      this.name = fromLS;
+    this.setGreating();
+    if (localStorage.getItem('name') !== "" && localStorage.getItem('name') !== undefined) {
+      this.name = JSON.parse(localStorage.getItem('name') || '{}');
     }
   }
 
-  setName(event: any): void {
-    if (event.target.value != "") {
-      this.name = event.target.value;
+  setGreating() {
+    const date = new Date();
+    if (date.getHours() > 5 && date.getHours() < 19) {
+      this.greating = "Dzień dobry";
+    }
+  }
+  setName(event: Event) {
+    if ((event.target as HTMLInputElement).value !== "") {
+      this.name = (event.target as HTMLInputElement).value;
       localStorage.setItem('name', this.name);
     }
   }
