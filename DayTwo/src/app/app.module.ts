@@ -15,12 +15,18 @@ import { PokemonDashbordComponent } from './pokemon/components/pokemon-dashbord/
 import { PatroniteDashbordComponent } from './patronite/components/patronite-dashbord/patronite-dashbord.component';
 import { PokemonListaComponent } from './pokemon/components/pokemon-lista/pokemon-lista.component';
 
+import { reducer } from './pokemon/+pokemon/pokemon.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { StoreModule } from '@ngrx/store';
+
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     Error404Component,
     MainComponent,
+    StoreModule.forRoot({ pokemons: reducer }),
     PokemonItemComponent,
     PokemonListComponent,
     PokemonDashbordComponent,
