@@ -13,6 +13,7 @@ import { PokemonItemComponent } from './pokemon/components/pokemon-item/pokemon-
 import { PokemonListComponent } from './pokemon/components/pokemon-list/pokemon-list.component';
 import { PokemonDashbordComponent } from './pokemon/components/pokemon-dashbord/pokemon-dashbord.component';
 import { PatroniteDashbordComponent } from './patronite/components/patronite-dashbord/patronite-dashbord.component';
+import { PokemonListaComponent } from './pokemon/components/pokemon-lista/pokemon-lista.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PatroniteDashbordComponent } from './patronite/components/patronite-das
     PokemonItemComponent,
     PokemonListComponent,
     PokemonDashbordComponent,
-    PatroniteDashbordComponent
+    PatroniteDashbordComponent,
+    PokemonListaComponent
   ],
   imports: [
     CommonModule,

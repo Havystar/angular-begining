@@ -30,6 +30,14 @@ export class PokemonService {
 
   addPokemon() {
     let pokemon: IPokemon;
+    // pokemon = {
+    //   id: 1,
+    //   height: 2,
+    //   is_default: true,
+    //   name: "res.name,",
+    //   weight: 20
+    // }
+
     this.apiService.fetchRandomPokemon().subscribe(
       (res) => {
         pokemon = {
