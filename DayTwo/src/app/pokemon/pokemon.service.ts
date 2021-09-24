@@ -10,45 +10,38 @@ export interface IPokemon {
   weight: number
 }
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 
-export class PokemonService {
-  pokemons: IPokemon[] = [];
+// export class PokemonService {
+//   pokemons: IPokemon[] = [];
 
-  constructor(private apiService: ApiService) { }
+//   constructor(private apiService: ApiService) { }
 
-  getAllPokemons() {
-    return this.pokemons;
-  }
+//   getAllPokemons() {
+//     return this.pokemons;
+//   }
 
 
-  removePokemon(id: number) {
-    this.pokemons = this.pokemons.filter(p => p.id !== id)
-  }
+//   removePokemon(id: number) {
+//     this.pokemons = this.pokemons.filter(p => p.id !== id)
+//   }
 
-  addPokemon() {
-    let pokemon: IPokemon;
-    // pokemon = {
-    //   id: 1,
-    //   height: 2,
-    //   is_default: true,
-    //   name: "res.name,",
-    //   weight: 20
-    // }
+//   addPokemon() {
+//     let pokemon: IPokemon;
 
-    this.apiService.fetchRandomPokemon().subscribe(
-      (res) => {
-        pokemon = {
-          id: res.id,
-          height: res.height,
-          is_default: res.is_default,
-          name: res.name,
-          weight: res.weight
-        }
-        this.pokemons.push(pokemon);
-      });
-  }
+//     this.apiService.fetchRandomPokemon().subscribe(
+//       (res) => {
+//         pokemon = {
+//           id: res.id,
+//           height: res.height,
+//           is_default: res.is_default,
+//           name: res.name,
+//           weight: res.weight
+//         }
+//         this.pokemons.push(pokemon);
+//       });
+//   }
 
-}
+// }

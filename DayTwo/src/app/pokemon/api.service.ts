@@ -12,7 +12,7 @@ export class ApiService {
 
   url = 'http://pokeapi.co/api/v2/pokemon';
 
-  fetchRandomPokemon(): Observable<IPokemon> {
+  fetchRandomPokemon() {
     return this.http.get<IPokemon>(`${this.url}/${this.getRadnomId()}`);
   }
   private getRadnomId() {

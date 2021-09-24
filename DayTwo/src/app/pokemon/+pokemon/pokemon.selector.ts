@@ -4,6 +4,6 @@ export interface AppState {
     pokemons: IPokemon[];
 }
 
-export const selectCars = (state: AppState) => state.pokemons;
+export const selectPokemons = (state: AppState) => state.pokemons;
 
-export const selectAvailableCars = (state: AppState) => state.pokemons.filter(p => p.id > 50)
+export const selectPokemonsWhereIdIsOverFifty = (state: AppState) => state.pokemons.filter(p => p.id > 50);

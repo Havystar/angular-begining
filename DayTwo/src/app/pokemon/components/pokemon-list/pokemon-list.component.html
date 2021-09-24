@@ -1,5 +1,11 @@
-<ul>
-    <li *ngFor="let pokemon of pokemons">
+<ul class="first-list">
+    <li *ngFor="let pokemon of pokemons$ | async">
+        <app-pokemon-item [pokemonItem]="pokemon" (removePokemon)="deletePokemon($event)">
+        </app-pokemon-item>
+    </li>
+</ul>
+<ul class="secound-list">
+    <li *ngFor="let pokemon of selectedPokemons$ | async">
         <app-pokemon-item [pokemonItem]="pokemon" (removePokemon)="deletePokemon($event)">
         </app-pokemon-item>
     </li>

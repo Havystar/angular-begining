@@ -15,6 +15,6 @@ export class PokemonItemComponent implements OnInit {
   @Output() removePokemon = new EventEmitter<number>();
 
   removeItem(pokemon: IPokemon) {
-    this.removePokemon.emit(pokemon.id);
+    this.removePokemon.emit(this.pokemonItem.id);
   }
 }

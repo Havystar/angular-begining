@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { PokemonService } from '../../pokemon.service';
-
+import { IPokemon } from '../../pokemon.service';
+import { AppState, selectPokemons, selectPokemonsWhereIdIsOverFifty } from '../../+pokemon/pokemon.selector';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { removePokemon } from '../../+pokemon/pokemon.actions';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -9,12 +12,15 @@ import { PokemonService } from '../../pokemon.service';
 })
 
 export class PokemonListComponent {
-  constructor(private pokemonService: PokemonService) { }
+  pokemons$: Observable<IPokemon[]>;
+  selectedPokemons$: Observable<IPokemon[]>;
+  constructor(private store: Store<AppState>) {
+    this.pokemons$ = this.store.select(selectPokemons);
+    this.selectedPokemons$ = this.store.select(selectPokemonsWhereIdIsOverFifty);
+  }
 
-  pokemons = this.pokemonService.getAllPokemons();
 
-  deletePokemon(id: number) {
-    this.pokemonService.removePokemon(id);
-    this.pokemons = this.pokemonService.getAllPokemons();
+  deletePokemon(pokemonId: number) {
+    this.store.dispatch(removePokemon({ pokemonId }))
   }
 }

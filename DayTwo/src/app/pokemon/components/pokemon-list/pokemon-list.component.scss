@@ -1,0 +1,25 @@
+.first-list {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    list-style: none;
+}
+.secound-list {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    list-style: none;
+}
+li {
+    width: 60%;
+    margin-top: 1rem;
+    background-color: aquamarine;
+    border-radius: 60%;
+    padding: 10%;
+}

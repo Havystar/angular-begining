@@ -1,0 +1,8 @@
+.pokemon-item {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.pokemon-item > * {
+    width: 51%;
+}
