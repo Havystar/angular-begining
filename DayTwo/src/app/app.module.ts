@@ -6,8 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavComponent } from './routing/nav/nav.component';
-import { Error404Component } from './routing/error404/error404.component';
+import { NavComponent } from './shared/nav/nav.component';
+import { Error404Component } from './shared/error404/error404.component';
 import { MainComponent } from './home/main/main.component';
 import { PokemonItemComponent } from './pokemon/components/pokemon-item/pokemon-item.component';
 import { PokemonListComponent } from './pokemon/components/pokemon-list/pokemon-list.component';

@@ -19,5 +19,5 @@
 
         <p *ngSwitchDefault></p>
     </span>
-    <button type="submit">Send Money</button>
+    <button type="submit" [disabled]="patroniteForm.invalid">Send Money</button>
 </form>

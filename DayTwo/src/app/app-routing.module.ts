@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Error404Component } from './routing/error404/error404.component';
+import { Error404Component } from './shared/error404/error404.component';
 import { MainComponent } from './home/main/main.component';
 import { PatroniteDashbordComponent } from './patronite/components/patronite-dashbord/patronite-dashbord.component';
 import { PokemonDashbordComponent } from './pokemon/components/pokemon-dashbord/pokemon-dashbord.component';

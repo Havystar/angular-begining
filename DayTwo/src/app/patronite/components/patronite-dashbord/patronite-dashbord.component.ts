@@ -21,8 +21,8 @@ export class PatroniteDashbordComponent {
     { value: '3', label: 'przelew' },
   ];
 
-  selected: string = "";
-  value: number = 0;
+  selected = "";
+  value = 0;
   patroniteForm = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.maxLength(50)]),
     messege: new FormControl('', Validators.required),
